@@ -1,81 +1,192 @@
 :root {
-    --bg: #0f172a;
-    --card-bg: #1e293b;
-    --accent: #38bdf8;
-    --text: #ffffff;
+    --primary: #ffffff;
+    --secondary: #000000;
+    --accent: #00ff88; /* Verde neón sofisticado */
+    --gray: #111111;
+    --text-muted: #888888;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-    font-family: 'Inter', sans-serif;
-    background-color: var(--bg);
-    color: var(--text);
-    margin: 0;
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: var(--secondary);
+    color: var(--primary);
+    line-height: 1.5;
     overflow-x: hidden;
 }
 
-/* NAVEGACIÓN ADAPTABLE */
-nav {
+/* NAVEGACIÓN ESTILO APPLE */
+.glass-nav {
+    position: fixed;
+    top: 0;
+    width: 100%;
     display: flex;
-    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    padding: 20px;
-    background: rgba(15, 23, 42, 0.9);
-    gap: 10px;
+    padding: 20px 5%;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 
-nav ul {
-    display: flex;
-    list-style: none;
-    padding: 0;
-    gap: 15px;
+.logo {
+    font-size: 1.5rem;
+    font-weight: 800;
+    letter-spacing: -1px;
 }
 
-nav a {
+.logo span { color: var(--accent); }
+
+.btn-contact {
     text-decoration: none;
-    color: var(--text);
+    color: var(--secondary);
+    background: var(--primary);
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-weight: 600;
     font-size: 0.9rem;
+    transition: 0.3s;
 }
 
-/* HEADER */
-header {
-    padding: 80px 20px;
-    text-align: center;
-    background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
-}
-
-h1 { font-size: 2rem; margin-bottom: 20px; }
-.highlight { color: var(--accent); }
-
-.btn-main {
-    background: var(--accent);
-    color: #000;
-    padding: 12px 25px;
-    border-radius: 50px;
-    text-decoration: none;
-    font-weight: bold;
-    display: inline-block;
-}
-
-/* GRILLA DE SERVICIOS */
-#servicios { padding: 40px 20px; text-align: center; }
-
-.grid-servicios {
+/* HERO SECTION - IMPACTO TOTAL */
+.hero {
+    height: 100vh;
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 10%;
+    background: radial-gradient(circle at center, #111 0%, #000 100%);
 }
 
-.card {
-    background: var(--card-bg);
-    padding: 30px;
+.badge {
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 5px 15px;
+    border-radius: 20px;
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+h1 {
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    font-weight: 800;
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+h1 span {
+    background: linear-gradient(90deg, #fff, #555);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hero p {
+    color: var(--text-muted);
+    max-width: 600px;
+    font-size: clamp(1rem, 2vw, 1.2rem);
+}
+
+/* SERVICIOS - DISEÑO DE TARJETAS LIMPIAS */
+.services {
+    padding: 100px 5%;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px;
+}
+
+.service-card {
+    background: var(--gray);
+    padding: 50px 40px;
+    border-radius: 24px;
+    transition: 0.4s ease;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.service-card:hover {
+    transform: translateY(-10px);
+    border-color: var(--accent);
+}
+
+.num {
+    color: var(--accent);
+    font-weight: 800;
+    font-size: 1.2rem;
+    display: block;
+    margin-bottom: 20px;
+}
+
+.service-card h3 {
+    font-size: 1.5rem;
+    margin-bottom: 15px;
+}
+
+.service-card p {
+    color: var(--text-muted);
+}
+
+/* FOOTER PROFESIONAL */
+footer {
+    padding: 100px 5% 50px;
+    background: var(--primary);
+    color: var(--secondary);
+    border-radius: 50px 50px 0 0;
+    text-align: center;
+}
+
+footer h2 {
+    font-size: clamp(2rem, 5vw, 4rem);
+    margin-bottom: 40px;
+}
+
+.main-btn {
+    display: inline-block;
+    background: var(--secondary);
+    color: var(--primary);
+    padding: 20px 40px;
     border-radius: 15px;
-    border: 1px solid #334155;
+    text-decoration: none;
+    font-weight: 700;
+    margin: 10px;
 }
 
-/* AJUSTE PARA PC Y TABLET */
-@media (min-width: 768px) {
-    nav { flex-direction: row; justify-content: space-between; padding: 20px 10%; }
-    h1 { font-size: 3.5rem; }
-    .grid-servicios { flex-direction: row; justify-content: center; }
-    .card { width: 300px; }
+.sub-btn {
+    display: inline-block;
+    padding: 20px 40px;
+    color: var(--secondary);
+    text-decoration: underline;
+    font-weight: 700;
 }
+
+.footer-bottom {
+    margin-top: 80px;
+    padding-top: 20px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+    font-size: 0.8rem;
+    color: #666;
+}
+
+/* RESPONSIVE CELULAR */
+@media (max-width: 768px) {
+    .nav-links { display: none; }
+    h1 { margin-top: 40px; }
+    footer { border-radius: 30px 30px 0 0; }
+    }
