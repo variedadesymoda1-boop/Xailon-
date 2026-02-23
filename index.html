@@ -8,11 +8,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
-    <!-- Agregar Font Awesome para iconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 </head>
 <body>
-    <!-- Header/Navegación -->
     <header class="header">
         <nav class="nav container">
             <div class="logo">
@@ -22,8 +20,6 @@
                 <li><a href="#inicio">Inicio</a></li>
                 <li><a href="#servicios">Servicios</a></li>
                 <li><a href="#portfolio">Portfolio</a></li>
-                <li><a href="#proceso">Proceso</a></li>
-                <li><a href="#testimonios">Testimonios</a></li>
                 <li><a href="#contacto">Contacto</a></li>
             </ul>
             <button class="menu-toggle" aria-label="Menú">
@@ -35,12 +31,8 @@
     </header>
 
     <main>
-        <!-- Hero Section con imagen de fondo -->
+        <!-- HERO SECTION - Limpio, sin imagen de fondo -->
         <section id="inicio" class="hero">
-            <div class="hero-background">
-                <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=2072&q=80" alt="Desarrollo web" class="hero-bg-img">
-                <div class="hero-overlay"></div>
-            </div>
             <div class="container">
                 <div class="hero-content">
                     <span class="hero-tagline">XAILON | STUDIO DIGITAL PREMIUM</span>
@@ -53,107 +45,69 @@
                     </p>
                     <div class="hero-buttons">
                         <a href="#servicios" class="btn btn-primary">Explorar Expertise</a>
-                        <a href="#contacto" class="btn btn-outline">Agendar Consultoría</a>
-                    </div>
-                    
-                    <!-- Estadísticas -->
-                    <div class="hero-stats">
-                        <div class="stat-item">
-                            <span class="stat-number">150+</span>
-                            <span class="stat-label">Proyectos Completados</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">98%</span>
-                            <span class="stat-label">Clientes Satisfechos</span>
-                        </div>
-                        <div class="stat-item">
-                            <span class="stat-number">5+</span>
-                            <span class="stat-label">Años de Experiencia</span>
-                        </div>
                     </div>
                 </div>
             </div>
+            <!-- Gradiente suave en lugar de imagen -->
+            <div class="hero-background">
+                <div class="gradient-orb"></div>
+                <div class="gradient-orb-2"></div>
+            </div>
         </section>
 
-        <!-- Servicios Section con iconos e imágenes -->
+        <!-- SERVICIOS - Exactamente como tu diseño 1000058449.jpg -->
         <section id="servicios" class="services">
             <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">LO QUE HACEMOS</span>
-                    <h2 class="section-title">Servicios de Firma</h2>
-                    <p class="section-description">
-                        Soluciones digitales personalizadas que transforman negocios y crean experiencias inolvidables.
-                    </p>
-                </div>
-                
                 <div class="services-grid">
-                    <!-- Servicio 1 con imagen -->
+                    <!-- Servicio 1 -->
                     <article class="service-card">
-                        <div class="service-image">
-                            <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="E-commerce">
-                            <div class="service-number">01</div>
-                        </div>
-                        <div class="service-content">
-                            <i class="fas fa-shopping-cart service-icon"></i>
-                            <h3 class="service-title">E-commerce Elite</h3>
-                            <p class="service-description">
-                                Plataformas de venta robustas con una experiencia de usuario impecable.
-                            </p>
-                            <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Carrito de compras avanzado</li>
-                                <li><i class="fas fa-check"></i> Pasarelas de pago seguras</li>
-                                <li><i class="fas fa-check"></i> Dashboard administrativo</li>
-                            </ul>
-                            <a href="#" class="service-link">Saber más <i class="fas fa-arrow-right"></i></a>
-                        </div>
+                        <div class="service-number">01</div>
+                        <h3 class="service-title">E-commerce Elite</h3>
+                        <p class="service-description">
+                            Plataformas de venta robustas con una experiencia de usuario impecable.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Carrito de compras avanzado</li>
+                            <li><i class="fas fa-check"></i> Pasarelas de pago seguras</li>
+                            <li><i class="fas fa-check"></i> Dashboard administrativo</li>
+                        </ul>
+                        <a href="#" class="service-link">Saber más →</a>
                     </article>
 
                     <!-- Servicio 2 -->
                     <article class="service-card">
-                        <div class="service-image">
-                            <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1169&q=80" alt="Web Corporativa">
-                            <div class="service-number">02</div>
-                        </div>
-                        <div class="service-content">
-                            <i class="fas fa-building service-icon"></i>
-                            <h3 class="service-title">Webs Corporativas</h3>
-                            <p class="service-description">
-                                Arquitectura digital diseñada para proyectar autoridad y confianza global.
-                            </p>
-                            <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Diseño institucional</li>
-                                <li><i class="fas fa-check"></i> CMS personalizado</li>
-                                <li><i class="fas fa-check"></i> Multilenguaje</li>
-                            </ul>
-                            <a href="#" class="service-link">Saber más <i class="fas fa-arrow-right"></i></a>
-                        </div>
+                        <div class="service-number">02</div>
+                        <h3 class="service-title">Webs Corporativas</h3>
+                        <p class="service-description">
+                            Arquitectura digital diseñada para proyectar autoridad y confianza global.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Diseño institucional</li>
+                            <li><i class="fas fa-check"></i> CMS personalizado</li>
+                            <li><i class="fas fa-check"></i> Multilenguaje</li>
+                        </ul>
+                        <a href="#" class="service-link">Saber más →</a>
                     </article>
 
                     <!-- Servicio 3 -->
                     <article class="service-card">
-                        <div class="service-image">
-                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Sistemas Pro">
-                            <div class="service-number">03</div>
-                        </div>
-                        <div class="service-content">
-                            <i class="fas fa-cogs service-icon"></i>
-                            <h3 class="service-title">Sistemas Pro</h3>
-                            <p class="service-description">
-                                Desarrollo a medida que optimiza y automatiza cada proceso de tu empresa.
-                            </p>
-                            <ul class="service-features">
-                                <li><i class="fas fa-check"></i> Automatización de procesos</li>
-                                <li><i class="fas fa-check"></i> APIs personalizadas</li>
-                                <li><i class="fas fa-check"></i> Integración con ERP</li>
-                            </ul>
-                            <a href="#" class="service-link">Saber más <i class="fas fa-arrow-right"></i></a>
-                        </div>
+                        <div class="service-number">03</div>
+                        <h3 class="service-title">Sistemas Pro</h3>
+                        <p class="service-description">
+                            Desarrollo a medida que optimiza y automatiza cada proceso de tu empresa.
+                        </p>
+                        <ul class="service-features">
+                            <li><i class="fas fa-check"></i> Automatización de procesos</li>
+                            <li><i class="fas fa-check"></i> APIs personalizadas</li>
+                            <li><i class="fas fa-check"></i> Integración con ERP</li>
+                        </ul>
+                        <a href="#" class="service-link">Saber más →</a>
                     </article>
                 </div>
             </div>
         </section>
 
-        <!-- Portfolio/Proyectos destacados -->
+        <!-- PORTFOLIO - Basado en 1000058450.jpg -->
         <section id="portfolio" class="portfolio">
             <div class="container">
                 <div class="section-header">
@@ -162,215 +116,115 @@
                 </div>
                 
                 <div class="portfolio-grid">
+                    <!-- Tarjetas de portfolio sin imágenes, solo diseño limpio -->
                     <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1522542550221-31fd19575a2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Proyecto 1">
-                        <div class="portfolio-overlay">
-                            <h3>Luxury Fashion Store</h3>
-                            <p>E-commerce de moda premium</p>
-                            <a href="#" class="btn btn-small">Ver proyecto</a>
+                        <div class="portfolio-icon">
+                            <i class="fas fa-shopping-bag"></i>
                         </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=1115&q=80" alt="Proyecto 2">
-                        <div class="portfolio-overlay">
-                            <h3>Global Bank</h3>
-                            <p>Banca digital corporativa</p>
-                            <a href="#" class="btn btn-small">Ver proyecto</a>
-                        </div>
-                    </div>
-                    <div class="portfolio-item">
-                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1170&q=80" alt="Proyecto 3">
-                        <div class="portfolio-overlay">
-                            <h3>TechStart Hub</h3>
-                            <p>Plataforma de innovación</p>
-                            <a href="#" class="btn btn-small">Ver proyecto</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Proceso de trabajo -->
-        <section id="proceso" class="process">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">CÓMO TRABAJAMOS</span>
-                    <h2 class="section-title">De la idea al <span class="gradient-text">éxito digital</span></h2>
-                </div>
-                
-                <div class="process-steps">
-                    <div class="step">
-                        <div class="step-number">1</div>
-                        <div class="step-icon">
-                            <i class="fas fa-comments"></i>
-                        </div>
-                        <h3>Consultoría</h3>
-                        <p>Analizamos tus necesidades y objetivos de negocio</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">2</div>
-                        <div class="step-icon">
-                            <i class="fas fa-pencil-ruler"></i>
-                        </div>
-                        <h3>Diseño</h3>
-                        <p>Creamos la arquitectura y experiencia de usuario</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">3</div>
-                        <div class="step-icon">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3>Desarrollo</h3>
-                        <p>Construimos con tecnologías de vanguardia</p>
-                    </div>
-                    <div class="step">
-                        <div class="step-number">4</div>
-                        <div class="step-icon">
-                            <i class="fas fa-rocket"></i>
-                        </div>
-                        <h3>Lanzamiento</h3>
-                        <p>Desplegamos y optimizamos para resultados</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- Testimonios -->
-        <section id="testimonios" class="testimonials">
-            <div class="container">
-                <div class="section-header">
-                    <span class="section-subtitle">TESTIMONIOS</span>
-                    <h2 class="section-title">Lo que dicen nuestros <span class="gradient-text">clientes</span></h2>
-                </div>
-                
-                <div class="testimonials-grid">
-                    <div class="testimonial-card">
-                        <div class="testimonial-image">
-                            <img src="https://images.unsplash.com/photo-1494790108777-766fd34fde79?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" alt="Cliente">
-                        </div>
-                        <div class="testimonial-content">
-                            <i class="fas fa-quote-left quote-icon"></i>
-                            <p>"Xailon transformó completamente nuestra presencia online. Las ventas aumentaron un 200% en solo 3 meses."</p>
-                            <h4>María González</h4>
-                            <span>CEO, Fashion Store</span>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                        <h3>Luxury Fashion Store</h3>
+                        <p>E-commerce de moda premium</p>
+                        <div class="portfolio-tags">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
                         </div>
                     </div>
                     
-                    <div class="testimonial-card">
-                        <div class="testimonial-image">
-                            <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=687&q=80" alt="Cliente">
+                    <div class="portfolio-item">
+                        <div class="portfolio-icon">
+                            <i class="fas fa-university"></i>
                         </div>
-                        <div class="testimonial-content">
-                            <i class="fas fa-quote-left quote-icon"></i>
-                            <p>"Profesionalismo excepcional. Entregaron un sistema a medida que optimizó todos nuestros procesos internos."</p>
-                            <h4>Carlos Rodríguez</h4>
-                            <span>Director, TechCorp</span>
-                            <div class="rating">
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                                <i class="fas fa-star"></i>
-                            </div>
+                        <h3>Global Bank</h3>
+                        <p>Banca digital corporativa</p>
+                        <div class="portfolio-tags">
+                            <span>Vue.js</span>
+                            <span>Python</span>
+                            <span>PostgreSQL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="portfolio-item">
+                        <div class="portfolio-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3>TechStart Hub</h3>
+                        <p>Plataforma de innovación</p>
+                        <div class="portfolio-tags">
+                            <span>Next.js</span>
+                            <span>AWS</span>
+                            <span>GraphQL</span>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- Sección de tecnologías -->
-        <section class="technologies">
-            <div class="container">
-                <h3>Tecnologías que dominamos</h3>
-                <div class="tech-icons">
-                    <i class="fab fa-react"></i>
-                    <i class="fab fa-node-js"></i>
-                    <i class="fab fa-python"></i>
-                    <i class="fab fa-php"></i>
-                    <i class="fab fa-laravel"></i>
-                    <i class="fab fa-wordpress"></i>
-                    <i class="fab fa-aws"></i>
-                    <i class="fab fa-docker"></i>
-                </div>
-            </div>
-        </section>
-
-        <!-- Contacto Section -->
+        <!-- CONTACTO - Basado en 1000058452.jpg y 1000058453.jpg -->
         <section id="contacto" class="contact">
             <div class="container">
-                <div class="contact-grid">
-                    <div class="contact-info-side">
+                <div class="contact-wrapper">
+                    <div class="contact-header">
                         <div class="logo contact-logo">XAILON<span class="dot">.</span></div>
                         <h2 class="contact-title">¿Listo para elevar el estándar?</h2>
                         <p class="contact-description">
                             Agendemos una consultoría gratuita para analizar tu proyecto y descubrir cómo podemos ayudarte a alcanzar tus objetivos.
                         </p>
-                        
-                        <div class="contact-details">
+                    </div>
+
+                    <div class="contact-grid">
+                        <!-- Columna izquierda - Información de contacto (sin ubicación) -->
+                        <div class="contact-info">
                             <div class="contact-detail">
                                 <i class="fas fa-phone"></i>
                                 <div>
-                                    <h4>Teléfono</h4>
-                                    <p>+52 55 1234 5678</p>
+                                    <span class="detail-label">Teléfono</span>
+                                    <span class="detail-value">+52 55 1234 5678</span>
                                 </div>
                             </div>
                             <div class="contact-detail">
                                 <i class="fas fa-envelope"></i>
                                 <div>
-                                    <h4>Email</h4>
-                                    <p>hola@xailon.com</p>
+                                    <span class="detail-label">Email</span>
+                                    <span class="detail-value">hola@xailon.com</span>
                                 </div>
                             </div>
-                            <div class="contact-detail">
-                                <i class="fas fa-map-marker-alt"></i>
-                                <div>
-                                    <h4>Ubicación</h4>
-                                    <p>CDMX / Monterrey / Remote</p>
-                                </div>
+                            
+                            <!-- Métodos de contacto rápidos -->
+                            <div class="contact-quick">
+                                <a href="https://wa.me/tunumero" class="btn btn-whatsapp" target="_blank">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp
+                                </a>
+                                <a href="mailto:hola@xailon.com" class="btn btn-email">
+                                    <i class="far fa-envelope"></i> Email
+                                </a>
                             </div>
                         </div>
-                    </div>
-                    
-                    <div class="contact-form">
-                        <form id="contactForm">
-                            <div class="form-group">
-                                <input type="text" placeholder="Nombre completo" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="email" placeholder="Email corporativo" required>
-                            </div>
-                            <div class="form-group">
-                                <input type="text" placeholder="Empresa">
-                            </div>
-                            <div class="form-group">
-                                <select>
-                                    <option>Selecciona un servicio</option>
-                                    <option>E-commerce Elite</option>
-                                    <option>Web Corporativa</option>
-                                    <option>Sistemas Pro</option>
-                                    <option>Otro</option>
-                                </select>
-                            </div>
-                            <div class="form-group">
-                                <textarea placeholder="Cuéntanos sobre tu proyecto..." rows="5"></textarea>
-                            </div>
-                            <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
-                        </form>
-                        
-                        <div class="contact-buttons">
-                            <a href="https://wa.me/tunumero" class="btn btn-whatsapp" target="_blank">
-                                <i class="fab fa-whatsapp"></i> WhatsApp
-                            </a>
-                            <a href="mailto:info@xailon.com" class="btn btn-email">
-                                <i class="far fa-envelope"></i> Email
-                            </a>
+
+                        <!-- Columna derecha - Formulario -->
+                        <div class="contact-form">
+                            <form id="contactForm">
+                                <div class="form-group">
+                                    <input type="text" placeholder="Nombre completo">
+                                </div>
+                                <div class="form-group">
+                                    <input type="email" placeholder="Email corporativo">
+                                </div>
+                                <div class="form-group">
+                                    <input type="text" placeholder="Empresa">
+                                </div>
+                                <div class="form-group">
+                                    <select>
+                                        <option>Selecciona un servicio</option>
+                                        <option>E-commerce Elite</option>
+                                        <option>Web Corporativa</option>
+                                        <option>Sistemas Pro</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <textarea placeholder="Cuéntanos sobre tu proyecto..." rows="4"></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary btn-block">Enviar mensaje</button>
+                            </form>
                         </div>
                     </div>
                 </div>
@@ -378,9 +232,19 @@
         </section>
     </main>
 
-    <!-- Footer -->
+    <!-- FOOTER simple -->
     <footer class="footer">
         <div class="container">
-            <div class="footer-grid">
-                <div class="footer-info">
-                    
+            <div class="footer-content">
+                <p class="copyright">© 2026 Xailon Digital Studio. Todos los derechos reservados.</p>
+                <div class="footer-legal">
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Términos de uso</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+                                             </html>
