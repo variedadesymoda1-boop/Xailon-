@@ -3,52 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Xailon | Desarrolladores Web</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
+    <title>Xailon | Digital Studio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;500;800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-    <nav>
-        <div class="logo">XAILON</div>
-        <ul>
-            <li><a href="#inicio">Inicio</a></li>
-            <li><a href="#servicios">Servicios</a></li>
-            <li><a href="#contacto">Contacto</a></li>
-        </ul>
+    <nav class="glass-nav">
+        <div class="logo">XAILON<span>.</span></div>
+        <div class="nav-links">
+            <a href="#servicios">Expertise</a>
+            <a href="#contacto" class="btn-contact">Empezar Proyecto</a>
+        </div>
     </nav>
 
-    <header id="inicio">
-        <h1>Transformamos tus ideas en <span class="highlight">Realidad Digital</span></h1>
-        <p>Expertos en desarrollo de páginas web modernas y personalizadas desde Girardot.</p>
-        <a href="#contacto" class="btn-main">Cotizar proyecto</a>
-    </header>
+    <main>
+        <section class="hero">
+            <div class="badge">Agencia de Desarrollo Premium</div>
+            <h1>Creamos el futuro <br> de tu <span>negocio online</span></h1>
+            <p>No solo hacemos webs, construimos herramientas de venta digitales que proyectan confianza y exclusividad.</p>
+        </section>
 
-    <section id="servicios">
-        <h2>Nuestros Servicios</h2>
-        <div class="grid-servicios">
-            <div class="card">
-                <h3>Landing Pages</h3>
-                <p>Diseños de alto impacto para captar clientes.</p>
+        <section id="servicios" class="services">
+            <div class="section-header">
+                <h2>Servicios Especializados</h2>
             </div>
-            <div class="card">
-                <h3>Tiendas Online</h3>
-                <p>E-commerce completo para vender 24/7.</p>
+            <div class="services-grid">
+                <div class="service-card">
+                    <span class="num">01</span>
+                    <h3>E-commerce Elite</h3>
+                    <p>Tiendas virtuales diseñadas para vender masivamente con una experiencia de usuario impecable.</p>
+                </div>
+                <div class="service-card">
+                    <span class="num">02</span>
+                    <h3>Sistemas Web</h3>
+                    <p>Automatización de procesos y plataformas personalizadas para optimizar tu empresa.</p>
+                </div>
+                <div class="service-card">
+                    <span class="num">03</span>
+                    <h3>Branding Digital</h3>
+                    <p>Diseño visual que posiciona tu marca por encima de cualquier competencia.</p>
+                </div>
             </div>
-            <div class="card">
-                <h3>Webs Corporativas</h3>
-                <p>Presencia digital profesional para tu marca.</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <footer id="contacto">
-        <h2>¿Listo para empezar?</h2>
-        <div class="socials">
-            <a href="#">WhatsApp</a>
-            <a href="#">Instagram</a>
+        <div class="footer-content">
+            <h2>¿Tienes una visión? <br> Nosotros la codificamos.</h2>
+            <div class="footer-cta">
+                <a href="https://wa.me/tu-numero" class="main-btn">Escribir por WhatsApp</a>
+                <a href="mailto:hola@xailon.com" class="sub-btn">Enviar Email</a>
+            </div>
         </div>
-        <p class="copy">&copy; 2026 Xailon Desarrolladores Web</p>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Xailon Digital Studio. Todos los derechos reservados.</p>
+        </div>
     </footer>
 
 </body>
