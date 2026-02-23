@@ -1,61 +1,145 @@
+/* VARIABLES DE COLOR */
 :root {
     --bg: #0f172a;
+    --card-bg: #1e293b;
     --accent: #38bdf8;
-    --text: #f1f5f9;
+    --text-main: #ffffff;
+    --text-dim: #94a3b8;
 }
 
+/* ESTILOS BASE (Móvil) */
 body {
-    font-family: 'Segoe UI', sans-serif;
+    font-family: 'Inter', sans-serif;
     background-color: var(--bg);
-    color: var(--text);
+    color: var(--text-main);
     margin: 0;
-    scroll-behavior: smooth;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
+/* NAVEGACIÓN (Se apila en móviles) */
 nav {
     display: flex;
-    justify-content: space-between;
-    padding: 20px 5%;
-    background: rgba(15, 23, 42, 0.9);
-    position: sticky;
-    top: 0;
+    flex-direction: column;
+    align-items: center;
+    padding: 15px;
+    background: rgba(15, 23, 42, 0.95);
+    border-bottom: 1px solid #334155;
+    gap: 10px;
 }
 
-header {
-    height: 80vh;
+.logo {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--accent);
+    letter-spacing: 1px;
+}
+
+nav ul {
     display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    list-style: none;
+    gap: 15px;
+    padding: 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: var(--text-main);
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+/* HEADER / HERO */
+header {
+    padding: 60px 20px;
     text-align: center;
-    padding: 0 10%;
+    background: radial-gradient(circle at top, #1e293b 0%, #0f172a 100%);
+}
+
+h1 {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    margin-bottom: 20px;
 }
 
 .highlight { color: var(--accent); }
 
+header p {
+    color: var(--text-dim);
+    margin-bottom: 30px;
+}
+
 .btn-main {
     background: var(--accent);
-    color: var(--bg);
-    padding: 12px 30px;
-    border-radius: 5px;
+    color: #000;
+    padding: 14px 28px;
+    border-radius: 50px;
     text-decoration: none;
     font-weight: bold;
-    margin-top: 20px;
+}
+
+/* SERVICIOS (Una columna en móvil) */
+#servicios {
+    padding: 50px 20px;
+    text-align: center;
 }
 
 .grid-servicios {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    display: flex;
+    flex-direction: column;
     gap: 20px;
-    padding: 50px 10%;
+    margin-top: 30px;
 }
 
 .card {
-    background: #1e293b;
+    background: var(--card-bg);
     padding: 30px;
     border-radius: 15px;
     border: 1px solid #334155;
-    transition: 0.3s;
 }
 
-.card:hover { border-color: var(--accent); transform: translateY(-5px); }
+.card h3 { color: var(--accent); }
+
+/* FOOTER */
+footer {
+    padding: 40px 20px;
+    text-align: center;
+    background: #070a13;
+}
+
+.socials {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.socials a {
+    color: var(--accent);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+/* --- AJUSTES PARA TABLET Y PC (Pantallas de más de 768px) --- */
+@media (min-width: 768px) {
+    nav {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 10%;
+    }
+
+    h1 { font-size: 3.5rem; }
+
+    .grid-servicios {
+        flex-direction: row;
+        justify-content: center;
+        padding: 0 10%;
+    }
+
+    .card {
+        flex: 1;
+        max-width: 300px;
+    }
+
+    header { padding: 120px 10%; }
+}
