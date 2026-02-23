@@ -1,11 +1,3 @@
-:root {
-    --primary: #ffffff;
-    --secondary: #000000;
-    --accent: #00ff88; /* Verde neón sofisticado */
-    --gray: #111111;
-    --text-muted: #888888;
-}
-
 * {
     margin: 0;
     padding: 0;
@@ -13,180 +5,94 @@
 }
 
 body {
-    font-family: 'Plus Jakarta Sans', sans-serif;
-    background-color: var(--secondary);
-    color: var(--primary);
-    line-height: 1.5;
-    overflow-x: hidden;
+    font-family: 'Poppins', sans-serif;
+    background-color: #050505;
+    color: #ffffff;
+    line-height: 1.4;
 }
 
-/* NAVEGACIÓN ESTILO APPLE */
-.glass-nav {
-    position: fixed;
-    top: 0;
-    width: 100%;
+/* NAVEGACIÓN */
+.navbar {
     display: flex;
     justify-content: space-between;
-    align-items: center;
     padding: 20px 5%;
-    background: rgba(0, 0, 0, 0.8);
-    backdrop-filter: blur(10px);
-    z-index: 1000;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.logo {
-    font-size: 1.5rem;
-    font-weight: 800;
-    letter-spacing: -1px;
-}
-
-.logo span { color: var(--accent); }
-
-.btn-contact {
-    text-decoration: none;
-    color: var(--secondary);
-    background: var(--primary);
-    padding: 10px 20px;
-    border-radius: 8px;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: 0.3s;
-}
-
-/* HERO SECTION - IMPACTO TOTAL */
-.hero {
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    background: #000;
     align-items: center;
+}
+
+.logo { font-weight: 700; font-size: 1.5rem; letter-spacing: 2px; }
+
+.menu-simple a {
+    color: #fff;
+    text-decoration: none;
+    border: 1px solid #fff;
+    padding: 8px 15px;
+    border-radius: 5px;
+}
+
+/* HERO SECTION */
+.hero {
+    padding: 80px 5%;
     text-align: center;
-    padding: 0 10%;
-    background: radial-gradient(circle at center, #111 0%, #000 100%);
+    background: linear-gradient(to bottom, #111, #050505);
 }
 
-.badge {
-    border: 1px solid var(--accent);
-    color: var(--accent);
-    padding: 5px 15px;
-    border-radius: 20px;
-    font-size: 0.7rem;
-    text-transform: uppercase;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-}
+.hero h1 { font-size: 2.5rem; line-height: 1.1; margin-bottom: 20px; }
+.hero h1 span { color: #00d4ff; }
+.hero p { color: #ccc; margin-bottom: 30px; font-size: 1.1rem; }
 
-h1 {
-    font-size: clamp(2.5rem, 8vw, 5rem);
-    font-weight: 800;
-    line-height: 1;
-    margin-bottom: 25px;
-}
-
-h1 span {
-    background: linear-gradient(90deg, #fff, #555);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
-
-.hero p {
-    color: var(--text-muted);
-    max-width: 600px;
-    font-size: clamp(1rem, 2vw, 1.2rem);
-}
-
-/* SERVICIOS - DISEÑO DE TARJETAS LIMPIAS */
-.services {
-    padding: 100px 5%;
-}
-
-.section-header h2 {
-    font-size: 2.5rem;
-    margin-bottom: 50px;
-    text-align: center;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 30px;
-}
-
-.service-card {
-    background: var(--gray);
-    padding: 50px 40px;
-    border-radius: 24px;
-    transition: 0.4s ease;
-    border: 1px solid rgba(255, 255, 255, 0.05);
-}
-
-.service-card:hover {
-    transform: translateY(-10px);
-    border-color: var(--accent);
-}
-
-.num {
-    color: var(--accent);
-    font-weight: 800;
-    font-size: 1.2rem;
-    display: block;
-    margin-bottom: 20px;
-}
-
-.service-card h3 {
-    font-size: 1.5rem;
-    margin-bottom: 15px;
-}
-
-.service-card p {
-    color: var(--text-muted);
-}
-
-/* FOOTER PROFESIONAL */
-footer {
-    padding: 100px 5% 50px;
-    background: var(--primary);
-    color: var(--secondary);
-    border-radius: 50px 50px 0 0;
-    text-align: center;
-}
-
-footer h2 {
-    font-size: clamp(2rem, 5vw, 4rem);
-    margin-bottom: 40px;
-}
-
-.main-btn {
-    display: inline-block;
-    background: var(--secondary);
-    color: var(--primary);
-    padding: 20px 40px;
-    border-radius: 15px;
+.btn-primary {
+    background: #00d4ff;
+    color: #000;
+    padding: 15px 30px;
     text-decoration: none;
     font-weight: 700;
-    margin: 10px;
+    border-radius: 50px;
+    display: inline-block;
 }
 
-.sub-btn {
-    display: inline-block;
-    padding: 20px 40px;
-    color: var(--secondary);
-    text-decoration: underline;
+/* GRILLA DE SERVICIOS */
+.container { padding: 60px 5%; }
+.title { text-align: center; margin-bottom: 40px; font-size: 2rem; }
+
+.grid {
+    display: flex;
+    flex-wrap: wrap; /* Esto evita que se amontonen */
+    gap: 20px;
+    justify-content: center;
+}
+
+.card {
+    background: #111;
+    padding: 30px;
+    border-radius: 15px;
+    width: 100%; /* En celular ocupa todo */
+    max-width: 350px; /* En PC se limita */
+    border: 1px solid #222;
+}
+
+.card h3 { color: #00d4ff; margin-bottom: 15px; }
+
+/* FOOTER */
+footer {
+    padding: 80px 5%;
+    text-align: center;
+    background: #000;
+    border-top: 1px solid #222;
+}
+
+.links { margin: 30px 0; }
+.links a {
+    color: #00d4ff;
+    margin: 0 10px;
+    text-decoration: none;
     font-weight: 700;
 }
 
-.footer-bottom {
-    margin-top: 80px;
-    padding-top: 20px;
-    border-top: 1px solid rgba(0,0,0,0.1);
-    font-size: 0.8rem;
-    color: #666;
-}
+.foot-text { font-size: 0.8rem; color: #555; margin-top: 40px; }
 
-/* RESPONSIVE CELULAR */
-@media (max-width: 768px) {
-    .nav-links { display: none; }
-    h1 { margin-top: 40px; }
-    footer { border-radius: 30px 30px 0 0; }
-    }
+/* AJUSTE PARA PANTALLAS GRANDES */
+@media (min-width: 768px) {
+    .hero h1 { font-size: 4rem; }
+    .grid { flex-direction: row; }
+}
