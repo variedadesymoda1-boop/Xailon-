@@ -1,98 +1,149 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+:root {
+    --white: #ffffff;
+    --black: #000000;
+    --soft-gray: #f5f5f7;
+    --dark-gray: #1d1d1f;
+    --accent: #0071e3; /* Azul Apple */
 }
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
-    font-family: 'Poppins', sans-serif;
-    background-color: #050505;
-    color: #ffffff;
-    line-height: 1.4;
+    font-family: 'Outfit', sans-serif;
+    background-color: var(--white);
+    color: var(--black);
+    line-height: 1.6;
+    -webkit-font-smoothing: antialiased;
 }
+
+.container { width: 90%; max-width: 1100px; margin: 0 auto; }
 
 /* NAVEGACIÓN */
-.navbar {
+.nav-minimal {
     display: flex;
     justify-content: space-between;
-    padding: 20px 5%;
-    background: #000;
-    align-items: center;
+    padding: 30px 5%;
+    position: sticky;
+    top: 0;
+    background: rgba(255,255,255,0.8);
+    backdrop-filter: blur(15px);
+    z-index: 100;
 }
 
-.logo { font-weight: 700; font-size: 1.5rem; letter-spacing: 2px; }
+.logo { font-weight: 800; font-size: 1.4rem; letter-spacing: -1px; }
 
-.menu-simple a {
-    color: #fff;
+.cta-link {
     text-decoration: none;
-    border: 1px solid #fff;
-    padding: 8px 15px;
-    border-radius: 5px;
+    color: var(--black);
+    font-weight: 600;
+    border-bottom: 2px solid var(--black);
+    padding-bottom: 2px;
 }
 
 /* HERO SECTION */
-.hero {
-    padding: 80px 5%;
-    text-align: center;
-    background: linear-gradient(to bottom, #111, #050505);
+.hero-premium {
+    padding: 120px 0 80px;
+    text-align: left;
 }
 
-.hero h1 { font-size: 2.5rem; line-height: 1.1; margin-bottom: 20px; }
-.hero h1 span { color: #00d4ff; }
-.hero p { color: #ccc; margin-bottom: 30px; font-size: 1.1rem; }
+.intro-text {
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #888;
+    display: block;
+    margin-bottom: 20px;
+}
 
-.btn-primary {
-    background: #00d4ff;
-    color: #000;
-    padding: 15px 30px;
+h1 {
+    font-size: clamp(2.5rem, 8vw, 4.5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 30px;
+}
+
+h1 span { color: #888; font-weight: 300; }
+
+.hero-premium p {
+    font-size: 1.3rem;
+    max-width: 700px;
+    color: var(--dark-gray);
+    font-weight: 300;
+}
+
+/* EXPERTISE / SERVICIOS */
+.expertise {
+    background-color: var(--soft-gray);
+    padding: 100px 0;
+    border-radius: 50px 50px 0 0;
+}
+
+.section-label {
+    font-size: 2rem;
+    margin-bottom: 60px;
+}
+
+.expertise-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.exp-item {
+    padding: 20px 0;
+}
+
+.number {
+    font-size: 0.8rem;
+    font-weight: 800;
+    color: var(--accent);
+    display: block;
+    margin-bottom: 15px;
+}
+
+.exp-item h3 {
+    font-size: 1.6rem;
+    margin-bottom: 15px;
+}
+
+.exp-item p {
+    color: #666;
+    font-size: 1.1rem;
+}
+
+/* FOOTER / CONTACTO */
+.final-cta {
+    padding: 100px 0 40px;
+    text-align: center;
+}
+
+.final-cta h2 {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    margin-bottom: 40px;
+}
+
+.btn-black {
+    background: var(--black);
+    color: var(--white);
+    padding: 20px 45px;
     text-decoration: none;
-    font-weight: 700;
-    border-radius: 50px;
+    border-radius: 100px;
+    font-weight: 600;
     display: inline-block;
+    margin-bottom: 25px;
 }
 
-/* GRILLA DE SERVICIOS */
-.container { padding: 60px 5%; }
-.title { text-align: center; margin-bottom: 40px; font-size: 2rem; }
-
-.grid {
-    display: flex;
-    flex-wrap: wrap; /* Esto evita que se amontonen */
-    gap: 20px;
-    justify-content: center;
+.footer-bottom {
+    margin-top: 100px;
+    border-top: 1px solid #eee;
+    padding-top: 20px;
+    font-size: 0.8rem;
+    color: #999;
 }
 
-.card {
-    background: #111;
-    padding: 30px;
-    border-radius: 15px;
-    width: 100%; /* En celular ocupa todo */
-    max-width: 350px; /* En PC se limita */
-    border: 1px solid #222;
-}
-
-.card h3 { color: #00d4ff; margin-bottom: 15px; }
-
-/* FOOTER */
-footer {
-    padding: 80px 5%;
-    text-align: center;
-    background: #000;
-    border-top: 1px solid #222;
-}
-
-.links { margin: 30px 0; }
-.links a {
-    color: #00d4ff;
-    margin: 0 10px;
-    text-decoration: none;
-    font-weight: 700;
-}
-
-.foot-text { font-size: 0.8rem; color: #555; margin-top: 40px; }
-
-/* AJUSTE PARA PANTALLAS GRANDES */
-@media (min-width: 768px) {
-    .hero h1 { font-size: 4rem; }
-    .grid { flex-direction: row; }
+/* RESPONSIVE CELULAR */
+@media (max-width: 768px) {
+    .hero-premium { text-align: center; }
+    .hero-premium p { margin: 0 auto; }
+    .expertise { border-radius: 30px 30px 0 0; }
 }
